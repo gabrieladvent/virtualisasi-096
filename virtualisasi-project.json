@@ -1,3 +1,19 @@
 [ 
-	"cek-virtual-box" : "Tidak Ada"
+	"cek-virtual-box" : "Tidak Ada",
+	"instal virtual box" : {
+		        "step 1" : "Setelah download, klik dua kali untuk melakukan instalasi",
+			"step 2" : "Klik next untuk melanjutkan instalasi",
+			"step 3" : "Memilih lokasi penyimpanan setelah instalasi",
+			"step 4" : "Tunggu proses instalasi",
+			"step 5" : "Proses instalasi berhasil"
+		   	       },
+	"menambahkan virtual mesin" : {
+			"step 1" : "Klik tombol New",
+			"step 2" : "Mengisi field yang diminta dan menambahkan file iso",
+			"step 3" : "Mengisi field username dan password untuk akun vm",
+			"step 4" : "Mengatur base memory, processors, dan hardisk",
+			"step 5" : "Klik finish untuk memulai penginstalan vm sesuai dengan os yang dipilih",
+			"step 6" : "instalasi vm berhasil"
+				      }
+
 ]

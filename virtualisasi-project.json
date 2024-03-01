@@ -1,3 +1,52 @@
 [ 
-	"cek-virtual-box" : "Tidak Ada"
+	"cek-virtual-box" : "Tidak Ada",
+	"instal virtual box" : {
+		        "step 1" : "Setelah download, klik dua kali untuk melakukan instalasi",
+			"step 2" : "Klik next untuk melanjutkan instalasi",
+			"step 3" : "Memilih lokasi penyimpanan setelah instalasi",
+			"step 4" : "Tunggu proses instalasi",
+			"step 5" : "Proses instalasi berhasil"
+		   	       },
+	"menambahkan virtual mesin" : {
+			"step 1" : "Klik tombol New",
+			"step 2" : "Mengisi field yang diminta dan menambahkan file iso",
+			"step 3" : "Mengisi field username dan password untuk akun vm",
+			"step 4" : "Mengatur base memory, processors, dan hardisk",
+			"step 5" : "Klik finish untuk memulai penginstalan vm sesuai dengan os yang dipilih",
+			"step 6" : "instalasi vm berhasil"
+				      },
+	"Cloning vm" 		    : {
+			"step 1" : "Bukan virtual box",
+			"step 2" : "Klik kanan di vm pertama",
+			"step 3" : "pilih clone, ganti nama vm lalu next",
+			"step 4" : "jika sudah sesuai, maka klik finish dan proses clonning dimulai"
+				      },
+	"Ubah hostname"		     :{
+			"step 1" : "Running vm yang mau diubah hostnamenya",
+			"step 2" : "Ketik: 'sudo hostnamectl set-hostname (nama baru)'",
+			"step 3" : "enter",
+			"step 4" : "Untuk mengecek bisa dengan mengetik 'hostnamectl'"
+				     },
+	"Ubah password" 	    :{
+			"step 1" : "ketik 'passwd'",
+			"step 2" : "Masukan password current",
+			"step 3" : "Masukan password baru",
+			"step 4" : "Masukan ulang password baru"
+				     },
+	"Ping antar vm"		    :{
+			"step 1" : "Membuka virtual box, kemudian membuat network baru",
+			"step 2" : "pastikan nama network yang baru di kedua vm sama",
+			"step 3" : "Menjalankan kedua vm",
+			"step 4" : "Untuk bisa ping, harus menyeting ip static di kedua vm",
+			"step 5" : "Untuk setting ip static bisa dengan command 'sudo nano /etc/netplan/(nama_file.yaml)'",
+			"step 6" : "Setelah selesai setting dan keluar dari nano, ketik command sudo netplan apply untuk menjalankan atau menggunakan settingan yang baru",
+			"step 7" : "Setelah itu, bisa melakukan ping dengan ip static yang sudah di setting sebelumnya"
+				     }
+	"Mengubah DNS"		    :{
+			"step 1" : "Menjalankan vm",
+			"step 2" : "Ketik command 'sudo nano /etc/hosts'",
+			"step 3" : "tambahkan baris baru berupa ip dari vm yang satunya dan namanya",
+			"step 3" : "contoh: '192.168.0.0 nama",
+			"step 4" : "Lakukan hal yang sama dengan vm yang satunya"
+				     }
 ]

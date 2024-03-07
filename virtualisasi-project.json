@@ -41,12 +41,46 @@
 			"step 5" : "Untuk setting ip static bisa dengan command 'sudo nano /etc/netplan/(nama_file.yaml)'",
 			"step 6" : "Setelah selesai setting dan keluar dari nano, ketik command sudo netplan apply untuk menjalankan atau menggunakan settingan yang baru",
 			"step 7" : "Setelah itu, bisa melakukan ping dengan ip static yang sudah di setting sebelumnya"
-				     }
+				     },
 	"Mengubah DNS"		    :{
 			"step 1" : "Menjalankan vm",
 			"step 2" : "Ketik command 'sudo nano /etc/hosts'",
 			"step 3" : "tambahkan baris baru berupa ip dari vm yang satunya dan namanya",
 			"step 3" : "contoh: '192.168.0.0 nama",
 			"step 4" : "Lakukan hal yang sama dengan vm yang satunya"
-				     }
+				     },
+	"Menginstal db server"	 : {
+			"vm"	 : "VM yang akan digunakan sebagai database server adalah VM hasil clonning dan db server yang digunakan adalah mysql",
+			"step 1" : "Untuk menginstall mysql cukup dengan ketik 'sudo apt install mysql-server'",
+			"step 2" : "Menjalankan secure installation dengan 'sudo mysql_secure_installation'",
+			"step 3" : "Setelah menjalankan dan konfigurasi, dapat mengecek status dengan 'sudo systemctl status mysql",
+			"step 4" : "Untuk dapat menghubungkan db server ke vm yang lain, setting bind-address",
+			"step 5" : "Ketik 'sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf'" kemudian di bind-address ubah menjadi 0.0.0.0",
+			"ket"	 : "Diganti menjadi 0.0.0.0 supaya request port database dari vm yang lain dapat diterima",
+			"step 6" : "Membuat user database baru supaya dapat diakses dari vm webserver",
+			"step 7" : "Pembuatan user dengan masuk ke mysql dengan ketik 'mysql -u root -p 'password'",
+			"step 8" : "Setelah masuk, ketik 'GRANT ALL PRIVILEGES ON *.* TO 'username'@'gabbyhaha' IDENTIFIED BY 'password';'",
+			"step 9" : "Ketik 'FLUSH PRIVILEGES;' untuk menerapkan perubahan",
+			"step 10": "Setelah keluar dari mysql, ketik 'sudo systemctl restart mysql' dan installation berhasil"
+				    },
+	"Menginstal web server"  : {
+			"vm"     : "VM yang akan digunakan sebagai web server adalah VM asli dan web server yang digunakan adalah nginx", 
+			"step 1" : "Untuk menginstall nginx dengan ketik 'sudo apt install nginx'", 
+			"step 2" : "Setelah selesai, jalankan nginx dengan 'sudo systemctl start nginx'", 
+			"opti"   : "Ketik 'sudo systemctl enable nginx' jika ingin nginx dijalankan secara otomatis", 
+			"step 3" : "Mengecek status nginx dengan ketik 'sudo systemctl enable nginx'", 
+			"opti"   : "Berhubungan saya mau menggunakan laravel jadinya saya menginstall php dan composer",
+			"step 4" : "Untuk install php dengan ketik 'sudo apt install php php-cli php-mbstring php-xml php-zip php-mysql'",
+			"step 5" : "Install composer dengan ketik 'sudo apt install composer'",
+			"step 6" : "Setelah itu saya mencoba menginstall laravel dengan ketik 'composer create-project laravel/laravel testing'",
+			"step 7" : "Buka file .env dengan nano dan setting databasenya",
+			"step 8" : "Pada database akan diisi dengan username yang sebelumnya sudah dibuat di database server, lalu untuk hostnya akan mengambil ip dari database server",
+			"step 9" : "Uji koneksi dengan melakukan migration dari laravel",
+			"step 10": "Mengatur proxi nginx agar dapat dibuka di browser windows",
+			"step 11": "Ketik 'cd /etc/nginx/site-available' dan buat file baru dan buka dengan nano",
+			"step 12": "Di dalam nano, konfigurasikan serer yang diterima kemudian pass proxy nya nanti",
+			"step 13": "Buat simbolik link file konfigurasi tadi ke folder sites-enable",
+			"step 14": "Reload nginx kemudian jalankan laravelnya",
+			"step 15": "Jika berhasil maka dapat diakses di browser"
+				   },
 ]

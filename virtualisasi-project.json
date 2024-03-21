@@ -83,4 +83,27 @@
 			"step 14": "Reload nginx kemudian jalankan laravelnya",
 			"step 15": "Jika berhasil maka dapat diakses di browser"
 				   },
+	"Mounting Folder"	 : {
+			"step 1" : "Buka V-box kemudian klik pada vm yang mau dibuat, mount folder atau share folder klik setting",
+			"step 2" : "Pada bagian kanan pilih menu shared folders",
+			"step 3" : "Tambahkan path folder yang mau di-share atau di-mount dan pada mount point isi dengan /mnt",
+			"opsi"   : "Bisa centang Auto-mount dan make-permanent supaya tidak menambahkan folder berulang kali",
+			"step 4" : "Klik OK kemudian nyalakan VM nya",
+			"step 5" : "Setelah masuk saya menginstall guest additions untuk membantu saya",
+			"step 6" : "Instalnya dengan mengetik 'sudo apt install virtualbox-guest-additions-iso'",
+			"step 7" : "Untuk mengecek folder mnt dapat dengan ketik cd /mnt. Jika masuk maka berhasil",
+			"step 8" : "Ketik 'sudo mkdir /mnt/shared_folder' untuk membuat folder tempat menampunug mouunt folder",
+			"step 9" : "Setelah itu ketik 'sudo mount -t vboxsf (nama folder yang sebelumnya dimount di setting) /mnt/shared_folder",
+			"opsi"   : "Command tadi berguna untuk mengonekan dan memasukan folder yang di mount ke dalam folder shared_folder",
+			"step 10": "Masuk ke dalam folder shared_folder untuk melihat apakah isinya sudah sesuai dengan folder asli yang dimount"
+				   },
+	"Menjalankan JAVA"	 : {
+			"step 1" : "Karena saya belum mempunyai jdk di dalam vm, makanya saya perlu menginstall terlebih dahulu dengan command 'sudo apt install default-jdk'",
+			"opsi"	 : "Untuk mengecek dapat dengan command java --version",
+			"step 2" : "Masuk ke dalam folder tempat untuk menyimpan file java nantinya",
+			"step 3" : "Membuat file java dengan command 'nano (nama_file).java, dan secara otomatis akan membuka nano",
+			"step 4" : "Pada file HelloWorld.java ini saya membuat agar dapat mengeprint tulisan 'Hello World' sesuai dengan sintax java. Setelah itu saya menyimpan filenya",
+			"step 5" : "Sebelum menjalankannya, sama mengkompail file tadi agar menjadi .class dengan command 'javac (nama_file).java",
+			"step 6" : "Kemudian jika ingin melihat hasil, maka dapat dengan command 'java (nama_file)' atau jika sesuai dengan file saya maka java HelloWorld"
+				   }
 ]

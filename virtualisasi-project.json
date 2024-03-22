@@ -64,11 +64,11 @@
 			"step 10": "Setelah keluar dari mysql, ketik 'sudo systemctl restart mysql' dan installation berhasil"
 				    },
 	"Menginstal web server"  : {
-			"vm"     : "VM yang akan digunakan sebagai web server adalah VM asli dan web server yang digunakan adalah nginx", 
-			"step 1" : "Untuk menginstall nginx dengan ketik 'sudo apt install nginx'", 
-			"step 2" : "Setelah selesai, jalankan nginx dengan 'sudo systemctl start nginx'", 
-			"opti"   : "Ketik 'sudo systemctl enable nginx' jika ingin nginx dijalankan secara otomatis", 
-			"step 3" : "Mengecek status nginx dengan ketik 'sudo systemctl enable nginx'", 
+			"vm"     : "VM yang akan digunakan sebagai web server adalah VM asli dan web server yang digunakan adalah nginx",
+			"step 1" : "Untuk menginstall nginx dengan ketik 'sudo apt install nginx'",
+			"step 2" : "Setelah selesai, jalankan nginx dengan 'sudo systemctl start nginx'",
+			"opti"   : "Ketik 'sudo systemctl enable nginx' jika ingin nginx dijalankan secara otomatis",
+			"step 3" : "Mengecek status nginx dengan ketik 'sudo systemctl enable nginx'",
 			"opti"   : "Berhubungan saya mau menggunakan laravel jadinya saya menginstall php dan composer",
 			"step 4" : "Untuk install php dengan ketik 'sudo apt install php php-cli php-mbstring php-xml php-zip php-mysql'",
 			"step 5" : "Install composer dengan ketik 'sudo apt install composer'",
